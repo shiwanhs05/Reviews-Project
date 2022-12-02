@@ -58,7 +58,6 @@ function randomIndex(){
   return randomIdx;
 }
 
-
 // show next person 
 nextBtn.addEventListener('click', ()=>{
   if(++currentItem === reviews.length) currentItem = 0;
@@ -72,6 +71,5 @@ prevBtn.addEventListener('click', ()=>{
 })
 // show random person
 randomBtn.addEventListener('click', ()=>{
-  currentItem = Math.floor(Math.random() * reviews.length);
-  showPerson(currentItem);
+  showPerson(randomIndex());
 })
